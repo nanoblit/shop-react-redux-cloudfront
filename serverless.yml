@@ -43,6 +43,9 @@ resources:
         WebsiteConfiguration:
           IndexDocument: index.html
           ErrorDocument: index.html
+        OwnershipControls:
+          Rules:
+            - ObjectOwnership: ObjectWriter
         # VersioningConfiguration:
         #   Status: Enabled
 
@@ -54,15 +57,6 @@ resources:
           Ref: WebAppS3Bucket
         PolicyDocument:
           Statement:
-            - Sid: "AllowPublicAccess"
-              Action:
-                - s3:ListBucket
-                - s3:GetObject
-              Resource:
-                - arn:aws:s3:::${self:custom.s3BucketName}/*
-                - arn:aws:s3:::${self:custom.s3BucketName}
-              Effect: Allow
-              Principal: "*"
             - Sid: "AllowCloudFrontAccessIdentity"
               Effect: Allow
               Action: s3:GetObject
