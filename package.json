@@ -22,7 +22,8 @@
     "cloudfront:build:deploy:nc": "npm run client:build:deploy:nc && npm run cloudfront:invalidateCache",
     "cloudfront:update:build:deploy": "npm run cloudfront:setup && npm run cloudfront:build:deploy",
     "cloudfront:update:build:deploy:nc": "npm run cloudfront:setup && npm run cloudfront:build:deploy:nc",
-    "serverless:remove": "sls remove"
+    "serverless:remove": "sls remove",
+    "deploy": "npm run cloudfront:build:deploy:nc"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
@@ -60,6 +61,7 @@
     "serverless": "^3.20.0",
     "serverless-finch": "^4.0.0",
     "serverless-s3-cleaner": "^2.0.1",
+    "serverless-single-page-app-plugin": "file:./serverless-single-page-app-plugin",
     "typescript": "^4.7.4",
     "vite": "^2.9.13",
     "vitest": "^0.17.1"
