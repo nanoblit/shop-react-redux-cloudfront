@@ -1,3 +1,8 @@
+# Links:
+
+- [CloudFront](https://d1x16d9gqricqg.cloudfront.net/)
+- [S3 bucket](https://my-store-app-nano.s3.eu-north-1.amazonaws.com/index.html)
+
 # React-shop-cloudfront
 
 This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
