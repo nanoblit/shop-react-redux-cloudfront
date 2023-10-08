@@ -2,6 +2,9 @@ service: my-store-app
 
 frameworkVersion: "3"
 
+package:
+  excludeDevDependencies: false
+
 provider:
   name: aws
   runtime: nodejs14.x
@@ -16,6 +19,8 @@ plugins:
   # How to build your own plugins: https://www.serverless.com/framework/docs/providers/aws/guide/plugins#service-local-plugin
   - serverless-single-page-app-plugin
   - serverless-s3-cleaner
+  - serverless-plugin-common-excludes
+  - serverless-plugin-include-dependencies
 
 custom:
   client:
