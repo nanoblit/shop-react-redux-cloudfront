@@ -60,6 +60,8 @@
     "prettier": "2.7.1",
     "serverless": "^3.20.0",
     "serverless-finch": "^4.0.0",
+    "serverless-plugin-common-excludes": "^4.0.0",
+    "serverless-plugin-include-dependencies": "^5.1.0",
     "serverless-s3-cleaner": "^2.0.1",
     "serverless-single-page-app-plugin": "file:./serverless-single-page-app-plugin",
     "typescript": "^4.7.4",
